@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Texto Alternativo</title>
+    <link rel="stylesheet" href="/css/colores.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/contacto.css">
+    <link rel="stylesheet" href="/css/nuestroscursos.css">
+</head>
+<body>
+    <header>
+        <div class="header-contenedor">
+            <a href="/index.html" class="logo-enlace">
+                <img src="/img/logo_svg.svg" alt="Plataforma Educativa - Volver al inicio" class="logo-img">
+            </a>
+            
+            <nav aria-label="Navegación principal">
+                
+                <button id="btn-menu" class="btn-accesible btn-hamburguesa" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú de navegación">
+                    <img src="/img/menu.png" alt="Abrir menú de navegación" aria-hidden="true">
+
+                    </svg>
+                </button>
+
+                <ul id="menu-principal" class="menu-enlaces">
+                    <li><a href="../index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./nuestroscursos.html">Nuestros Cursos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <button id="btn-tema" aria-label="Activar modo oscuro" aria-pressed="false">
+                <img src="../img/sol.png" alt="Activar Modo Claro">
+                <img src="../img/luna.png" alt="Activar Modo Oscuro">
+            </button>
+        </div>
+    </header>
+
+    
+    <div class="contenedor-principal layout-interno">
+        
+        <main id="contenido-principal" tabindex="-1">
+            <nav aria-label="Migas de pan" class="breadcrumb">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./nuestroscursos.html">Nuestros Cursos</a></li>
+                    <li><a href="#" aria-current="page">Taller de Texto Alternativo</a></li>
+                </ul>
+            </nav>
+
+            <!-- Detalle principal del producto -->
+            <section class="producto-detalle" aria-labelledby="titulo-producto">
+                <div class="producto-grid">
+                    <figure class="producto-galeria">
+                        <div class="imagen-principal-contenedor">
+                            <img src="../img/textoAlternativo.png" alt="Personas interactuando con tecnologías de asistencia para leer el contenido de un cartel" id="img-principal">
+                        </div>
+                        <figcaption class="sr-only">Imagen representativa del curso de accesibilidad digital.</figcaption>
+                    </figure>
+
+                    <div class="producto-info">
+                        <span class="producto-estado">Nuevo | +50 inscriptos</span>
+                        <h1 id="titulo-producto">Taller de Texto Alternativo</h1>
+                        <h2 class="producto-nivel">Nivel Avanzado</h2>
+                                            
+                        <div class="producto-descripcion">
+                            <h3>Lo que tenés que saber de este curso</h3>
+                            <p>Aprende a redactar descripciones precisas para que ningún usuario se quede sin el contexto visual de la información.</p>
+                            <ul>
+                                <li><strong>Modalidad:</strong> 100% Online y asincrónico.</li>
+                                <li><strong>Duración:</strong> 4 semanas de cursada intensiva.</li>
+                                <li><strong>Idioma:</strong> Español.</li>
+                                <li><strong>Normativas:</strong> Cumple con WCAG 2.2.</li>
+                            </ul>
+                            <!-- Cambiamos ID por CLASE btn-comprar -->
+                            <button type="button" class="btn-principal btn-comprar" aria-label="Comprar ahora Taller de Texto Alternativo"> Comprar ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="seccion-extra">
+                <h2>Detalles del Curso</h2>
+                <p>Este curso está diseñado para brindar las herramientas necesarias para comprender y aplicar correctamente las descripciones de imágenes en entornos digitales complejos.</p>
+                
+                <div class="requisitos-caja">
+                    <h3>Requisitos previos</h3>
+                    <p>Conocimientos básicos de HTML son recomendados pero no excluyentes.</p>   
+                    <h4>Perfil del estudiante ideal:</h4>
+                    <ul>
+                        <li>Desarrolladores web y maquetadores.</li>
+                        <li>Creadores de contenido y Community Managers.</li>
+                        <li>Auditores de calidad (QA).</li> 
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Aside interno de "Otros Cursos" -->
+            <aside class="seccion-extra otros-cursos" aria-labelledby="titulo-otros">
+                <h2 id="titulo-otros">Quienes vieron este curso también compraron</h2>
+                <ul class="otros-cursos-grid">
+                    <li>
+                        <figure class="mini-tarjeta">
+                            <img src="../img/textoAlternativo.png" alt="Curso de accesibilidad web básica" loading="lazy">
+                            <figcaption>
+                                <h3>Introducción a WCAG 2.2</h3>
+                                <p class="precio-mini">$ 12.000</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="mini-tarjeta">
+                            <img src="../img/textoAlternativo.png" alt="Curso de testing de accesibilidad" loading="lazy">
+                            <figcaption>
+                                <h3>Testing de Accesibilidad</h3>
+                                <p class="precio-mini">$ 15.000</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class="seccion-extra testimonios">
+                <h2>Opiniones de estudiantes</h2>
+                <blockquote class="testimonio-caja">
+                    <p>"Excelente curso. Me ayudó muchísimo a entender cómo estructurar el atributo alt en gráficos complejos."</p>
+                    <cite>- Martín, Desarrollador Frontend</cite>
+                </blockquote>
+            </section>
+
+            <section class="seccion-extra seccion-dudas">
+                <h2>¿Tenés dudas sobre este curso?</h2>
+                <p>Nuestro equipo de soporte está listo para ayudarte a elegir tu mejor ruta de aprendizaje.</p>
+                <a href="./contacto.html" class="btn-secundario">Ir a Contacto</a>
+            </section>
+        </main>
+
+        <!-- Aside Principal de Compra (Derecha) -->
+        <aside class="barra-lateral producto-comprar" aria-labelledby="titulo-compra">
+            <div class="sticky-lateral"> <!-- Envoltorio para hacerlo fijo en escritorio -->
+                <h2 id="titulo-compra" class="sr-only">Opciones de compra</h2>
+                
+                <div class="precio-contenedor">
+                    <p class="precio" aria-label="Precio: 14500 pesos argentinos">$ 14.500</p>
+                    <p class="impuestos">Precio sin impuestos nacionales: $ 14.500</p>
+                </div>
+                
+                <div class="envio-info">
+                    <p><strong>Acceso Inmediato</strong> a la plataforma.</p>
+                    
+                </div>
+
+                
+
+               
+                <button type="button" class="btn-principal btn-comprar" aria-label="Comprar ahora" id="btn-comprar-aside">
+                    Comprar ahora
+                </button>
+                
+                
+            </div>
+        </aside>    
+    </div> 
+
+
+    <footer>
+            <div class="footer-contenedor">
+                <p>© 2026 - Proyecto Final Integrador - Fundamentos del Diseño Web - UPSO - Alumna Brenda Yohena Tanoni</p>
+                
+                <div class="footer-grupo">
+                    <a href="https://github.com/tanonibrenda/UPSO_TPDWEB" target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio de este proyecto en GitHub">
+                        <img src="../img/github.jpg" alt="Logo de GitHub" class="footer-icono">
+                        <span>Repositorio</span>
+                    </a>
+                    <a href="https://tanonibrenda.github.io/UPSO_TPDWEB/" target="_blank" rel="noopener noreferrer" aria-label="Ver el sitio web desplegado en GitHub Pages">
+                        <img src="../img/githubpages.png" alt="Logo de GitHub Pages" class="footer-icono">
+                        <span>Sitio en Vivo</span>
+                    </a>
+                </div>
+
+                
+            </div>
+        </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/cursos.js"></script>
+</body>
+</html>

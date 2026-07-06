@@ -18,7 +18,7 @@ _Plataforma educativa — HTML + CSS + JS_
     index.HTML
     sobrenosotros.html
     nuestroscursos.html
-    cursocolores.html
+    cursoTextoAlt.html
     contacto.html
 - Meta viewport — incluida y validada  
 - Validación W3C — sin errores  
