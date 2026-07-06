@@ -5,20 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma Educativa | Inicio</title>
     <link rel="stylesheet" href="css/colores.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/tipografia.css">
 </head>
 <body>
     <header>
-        <button id="btn-tema" aria-label="Activar modo oscuro" aria-pressed="false">
-            <img src="img/sol.png" alt="Activar Modo Claro">
-            <img src="img/luna.png" alt="Activar Modo Oscuro">
-        </button>
-        <nav>
-        </nav>
+        <div class="header-contenedor">
+            
+            <nav aria-label="Navegación principal">
+                <button id="btn-menu" class="btn-accesible btn-hamburguesa" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú de navegación">
+                    <img src="img/menu.png" alt="Abrir menú de navegación" aria-hidden="true">
+
+                    </svg>
+                </button>
+
+                <ul id="menu-principal" class="menu-enlaces">
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="./pages/sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./pages/nuestroscursos.html">Nuestros Cursos</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <button id="btn-tema" aria-label="Activar modo oscuro" aria-pressed="false">
+                <img src="img/sol.png" alt="Activar Modo Claro">
+                <img src="img/luna.png" alt="Activar Modo Oscuro">
+            </button>
+        </div>
     </header>
 
-    <main>
+    <main id="contenido-principal" tabindex="-1">
         <h1>Bienvenido a la Plataforma Educativa</h1>
         <p>Contenido principal de la página de inicio.</p>
     </main>
