@@ -15,7 +15,28 @@
     align-items: center;
 }
 
+/* --- ESTILOS DEL LOGO --- */
+.logo-enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
 
+/* Tamaño del logo */
+.logo-img {
+    height: 44px; /* Misma altura mínima que los botones para armonía visual */
+    width: auto;
+    display: block;
+}
+
+/* Foco visible y claro para el logo (WCAG 2.4.13 Focus Appearance) */
+.logo-enlace:focus-visible {
+    outline: 3px solid var(--color-primario);
+    outline-offset: 4px;
+    border-radius: 50%; /* Como el logo es redondo, el foco redondo queda mejor */
+}
 /* BOTONES INTERACTIVOS (WCAG 2.5.5 Target Size AAA) */
 .btn-accesible {
     min-width: 44px;
