@@ -1,0 +1,69 @@
+
+/* Paleta de colores por defecto (Modo Claro) */
+:root {
+    --fondo-principal: #FAFAFA;
+    --texto-principal: #1A1A1A;
+    --color-primario: #0056b3; 
+    --color-superficie: #FFFFFF;
+    --borde: #CCCCCC;
+}
+
+/* Paleta de colores (Modo Oscuro) */
+body.modo-oscuro {
+    --fondo-principal: #121212;
+    --texto-principal: #E0E0E0;
+    --color-primario: #66B2FF; 
+    --color-superficie: #1E1E1E;
+    --borde: #333333;
+}
+
+/* Aplicación global de las variables */
+body {
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    /* Transición suave para el cambio de tema */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* --- ESTILOS DEL BOTÓN --- */
+#btn-tema {
+    background: transparent; 
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-tema:focus, 
+#btn-tema:hover {
+    outline: 2px solid var(--texto-principal);
+    outline-offset: 2px;
+}
+
+/* Fijamos el tamaño exacto de los íconos para que no se desborden */
+#btn-tema img {
+    width: 35px;
+    height: 35px;
+}
+
+/* LÓGICA DE VISIBILIDAD DE LOS ÍCONOS */
+
+/* Por defecto (Modo Claro): Ocultamos el sol (primer hijo) y mostramos la luna (último hijo) */
+#btn-tema img:first-child {
+    display: none;
+}
+#btn-tema img:last-child {
+    display: block;
+}
+
+/* Cuando estamos en Modo Oscuro: Mostramos el sol (primer hijo) y ocultamos la luna (último hijo) */
+body.modo-oscuro #btn-tema img:first-child {
+    display: block;
+}
+body.modo-oscuro #btn-tema img:last-child {
+    display: none;
+}
