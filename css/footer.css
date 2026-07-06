@@ -2,12 +2,12 @@
     ESTILOS DEL PIE DE PÁGINA 
    ==========================================================================  */
 :root {
-    --color-superficie-footer: #c37ff0; /* Color de fondo del footer */
+    --fondo-footer: #c37ff0; /* Color de fondo del footer */
 }
 
 footer {
-    background-color: var(--color-superficie-footer);
-    border-top: 3px solid var(--color-primario); /* Borde para  */
+    background-color: var(--fondo-footer);
+    border-top: 3px solid var(--color-primario); /* Borde para separar del contenido principal. Es más marcado en modo oscuro*/
     padding: 3rem 1.5rem;
     margin-top: 4rem;
     transition: background-color 0.3s ease, border-color 0.3s ease;

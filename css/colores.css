@@ -7,6 +7,8 @@
     --color-primario: #0056b3; 
     --color-superficie: #FFFFFF;
     --borde: #CCCCCC;
+    --fondo-footer: #F0F0F0;
+    --texto-boton: #FFFFFF;
 }
 
 /* Paleta de colores (Modo Oscuro) */
@@ -16,6 +18,8 @@ body.modo-oscuro {
     --color-primario: #66B2FF; 
     --color-superficie: #1E1E1E;
     --borde: #333333;
+    --fondo-footer: #000000;
+    --texto-boton: #000000;
 }
 
 /* Aplicación global de las variables */
