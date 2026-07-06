@@ -1,0 +1,327 @@
+/* ==========================================================================
+   index.css - Estilos Principales de la Página de Inicio (Index)
+   Diseño Accesible, Responsivo y Válido según Criterios WCAG 2.2 (AAA)
+   ========================================================================== */
+
+/* --- REGLAS GLOBALES Y MAQUETACIÓN BASE --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal para limitar el ancho y centrar el contenido */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Asegurar que el main tenga un espaciado consistente y no pegue al borde */
+main {
+    display: block;
+    padding: 2rem 0;
+    min-height: calc(100vh - 160px); /* Mantiene el footer abajo en pantallas con poco contenido */
+}
+
+/* Evitar outlines predeterminados en el main al recibir el foco de accesibilidad */
+main:focus {
+    outline: none;
+}
+
+
+/* ==========================================================================
+   1. SECCIÓN HERO (Presentación Principal)
+   ========================================================================== */
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna por defecto en dispositivos móviles */
+    gap: 2rem;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    margin-bottom: 3rem;
+    background-color: var(--color-superficie);
+    border-radius: 16px;
+    border: 1px solid var(--borde);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.hero-texto h1 {
+    /* Tipografía fluida clamp(mínimo, ideal, máximo) para evitar desbordes en zoom */
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem); 
+    color: var(--texto-principal);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.hero-texto p {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.5;
+    color: var(--texto-principal);
+    opacity: 0.9;
+    max-width: 55ch; /* Longitud de línea óptima para lectura confortable (WCAG) */
+}
+
+/* Botón interactivo "Leer más" (Cumple WCAG 2.5.5 Target Size de 44x44px) */
+.btn-leer-mas {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: var(--color-primario);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Estados de interacción del botón del hero */
+.btn-leer-mas:hover {
+    background-color: #004494; /* Tono más oscuro para contraste en modo claro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+body.modo-oscuro .btn-leer-mas:hover {
+    background-color: #85C2FF; /* Tono más claro para mantener contraste en modo oscuro */
+}
+
+.btn-leer-mas:focus-visible {
+    outline: 3px solid var(--texto-principal);
+    outline-offset: 3px;
+    transform: translateY(-2px);
+}
+
+.btn-leer-mas:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Control responsivo de la imagen del Hero */
+.hero-figure {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 480px; /* Evita gigantismos en pantallas de escritorio */
+    height: auto;
+    border-radius: 20px; /* Bordes curvos tipo contenedor moderno */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--borde);
+    object-fit: cover;
+}
+
+
+/* ==========================================================================
+   2. SECCIÓN INFORMATIVA (Texto Semántico)
+   ========================================================================== */
+.seccion-informativa {
+    padding: 3rem 1.5rem;
+    margin-bottom: 3rem;
+    background-color: var(--color-superficie);
+    border-radius: 16px;
+    border: 1px solid var(--borde);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.seccion-informativa h2,
+.seccion-destacados h2 {
+    color: var(--color-primario);
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.seccion-informativa p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--texto-principal);
+    margin-bottom: 1.25rem;
+}
+
+.seccion-informativa p:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilos específicos para etiquetas semánticas obligatorias */
+strong {
+    font-weight: 700;
+    color: var(--texto-principal);
+}
+
+em {
+    font-style: italic;
+}
+
+mark {
+    background-color: #FFF275; /* Amarillo de alta visibilidad */
+    color: #000000; /* Forzamos texto negro para asegurar contraste > 7:1 */
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+body.modo-oscuro mark {
+    background-color: #FFD43B;
+}
+
+cite {
+    font-style: normal;
+    font-weight: 600;
+    border-bottom: 1px dashed var(--color-primario);
+    color: var(--texto-principal);
+}
+
+
+/* ==========================================================================
+   3. SECCIÓN DE DESTACADOS (Grid de Tarjetas / Cards)
+   ========================================================================== */
+.seccion-destacados {
+    padding: 3rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Grid dinámico que evita desbordes laterales sin necesidad de media queries rígidas */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tarjeta {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Enlace estructural que envuelve la tarjeta (Incrementa significativamente el Target Size) */
+.tarjeta-enlace {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    outline: none; /* Desactivamos el anillo nativo para usar focus-visible personalizado */
+}
+
+.tarjeta figure {
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 16 / 10; /* Bloquea la relación de aspecto para simetría visual */
+    border-bottom: 1px solid var(--borde);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-contenido {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tarjeta-contenido h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--texto-principal);
+    line-height: 1.3;
+}
+
+.tarjeta-contenido h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-contenido p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--texto-principal);
+    opacity: 0.85;
+}
+
+/* --- INTERACTIVIDAD AVANZADA (PSEUDOCLASES DE ACCESIBILIDAD) --- */
+
+/* 1. Hover (Dispositivos apuntadores) */
+.tarjeta-enlace:hover .tarjeta {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primario);
+}
+
+.tarjeta-enlace:hover img {
+    transform: scale(1.04); /* Efecto interactivo de zoom suave */
+}
+
+/* 2. Focus Visible (Feedback claro y visible para navegación por teclado con Tab) */
+.tarjeta-enlace:focus-visible .tarjeta {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-primario);
+    outline: 3px solid var(--color-primario);
+    outline-offset: 4px;
+}
+
+.tarjeta-enlace:focus-visible img {
+    transform: scale(1.04);
+}
+
+/* 3. Active (Feedback instantáneo al hacer clic o pulsar Enter) */
+.tarjeta-enlace:active .tarjeta {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================================================
+   5. MEDIA QUERIES PARA ESCRITORIO (Reflujo WCAG 1.4.10)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1.2fr 0.8fr; /* Divide asimétricamente el texto de la imagen */
+        padding: 4rem 3rem;
+        gap: 3rem;
+    }
+}
+
+/* Clase utilitaria de accesibilidad (Ocultar visualmente, mantener en lectores de pantalla) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

@@ -1,5 +1,6 @@
 
 /* Paleta de colores por defecto (Modo Claro) */
+/* Custom Properties (variables)  */
 :root {
     --fondo-principal: #FAFAFA;
     --texto-principal: #1A1A1A;

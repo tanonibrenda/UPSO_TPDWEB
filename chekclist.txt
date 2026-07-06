@@ -106,4 +106,5 @@ _Plataforma educativa — HTML + CSS + JS_
 ---
 
 Pendiente:
-cambiar de lugar boton darkmode
+- cambiar de lugar boton darkmode ✔️
+- agregar icono a solapa

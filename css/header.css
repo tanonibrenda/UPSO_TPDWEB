@@ -17,6 +17,8 @@
 
 /* --- ESTILOS DEL LOGO --- */
 .logo-enlace {
+    margin: 4px;
+    padding: 4px;
     display: flex;
     align-items: center;
     justify-content: center;

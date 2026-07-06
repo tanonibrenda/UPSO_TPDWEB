@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma Educativa | Inicio</title>
+    <title>Plataforma Educativa</title>
     <link rel="stylesheet" href="css/colores.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/tipografia.css">
 </head>
 <body>
@@ -38,12 +39,71 @@
     </header>
 
     <main id="contenido-principal" tabindex="-1">
-        <h1>Bienvenido a la Plataforma Educativa</h1>
-        <p>Contenido principal de la página de inicio.</p>
+       <section class="hero-content">
+            <div class="hero-texto">
+                <h1>Plataforma Educativa</h1>
+                <p>Descubre una nueva forma de aprender con nuestra metodología innovadora y accesible.</p>
+                <a href="#cursos" class="btn-leer-mas" aria-label="Leer más sobre nuestros proyectos educativos">Leer más</a>
+            </div>
+            
+            <figure class="hero-figure">
+                <img src="img/academia.png" alt="Gorra de graduación negra con borla, diploma enrollado con cinta roja y recorte de papel de un contorno de cabeza con un cerebro visible sobre fondo rosa y papel matemático." class="hero-img">
+                <figcaption class="sr-only">Una composición de elementos académicos y de pensamiento crítico, destacando la finalización de estudios y el potencial intelectual en un entorno educativo moderno.</figcaption>
+            </figure>
+        </section>
+        <section class="seccion-informativa" aria-labelledby="titulo-metodologia">
+            <h2 id="titulo-metodologia">Nuestra Metodología de Estudio</h2>
+            <p> En nuestra plataforma valoramos el <strong>aprendizaje continuo y autónomo</strong>. Como se establece en los principios fundamentales del <cite>Diseño Universal para el Aprendizaje</cite> (DUA), es indispensable proporcionar múltiples formas de representación, expresión y compromiso.   </p>
+            <p> Recuerda que las evaluaciones son importantes, pero el proceso lo es aún más.             Recomendamos revisar el material complementario de forma <em>periódica</em>. Presta especial atención a las fechas del <mark>calendario académico 2026</mark> para optimizar tu tiempo.        </p>
+        </section>
+
+        <section class="seccion-destacados" aria-labelledby="titulo-destacados">
+            <h2 id="titulo-destacados">Cursos Destacados</h2>
+            <div class="grid-tarjetas">
+                
+                <article class="tarjeta">
+                    <a href="#curso-accesibilidad" class="tarjeta-enlace" aria-label="Ver detalles del curso Desarrollo Web Accesible">
+                        <figure>
+                            <img src="img/textoAlternativo.png" alt="Cartel de texto alternativo, con personas con ceguera, y usuarios de tecnologías de asistencia" loading="lazy">
+                        </figure>
+                        <div class="tarjeta-contenido">
+                            <h3>Taller de Texto Alternativo</h3>
+                            <h4>Nivel Avanzado</h4>
+                            <p>Cuando una imagen vale más que mil palabras, el texto alternativo es crucial para la accesibilidad.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="tarjeta">
+                    <a href="#curso-accesibilidad" class="tarjeta-enlace" aria-label="Ver detalles del curso Desarrollo Web Accesible">
+                        <figure>
+                            <img src="img/textoAlternativo.png" alt="Cartel de texto alternativo, con personas con ceguera, y usuarios de tecnologías de asistencia" loading="lazy">
+                        </figure>
+                        <div class="tarjeta-contenido">
+                            <h3>Taller de Texto Alternativo</h3>
+                            <h4>Nivel Avanzado</h4>
+                            <p>Cuando una imagen vale más que mil palabras, el texto alternativo es crucial para la accesibilidad.</p>
+                        </div>
+                    </a>
+                </article>
+
+            </div>
+        </section>
     </main>
 
     <footer>
-        </footer>
+        <div class="footer-contenedor">
+            <p>© 2026 - Proyecto Final Integrador - Fundamentos del Diseño Web</p>
+            <div class="certificaciones-w3c">
+                <a href="http://validator.w3.org/check?uri=referer">
+                    <img src="img/valid-html5.svg" alt="W3C HTML5 Validado">
+                </a>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img src="img/valid-css3.svg" alt="W3C CSS Validado">
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
