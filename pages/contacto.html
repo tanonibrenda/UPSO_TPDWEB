@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/css/colores.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/contacto.css">
+</head>
+<body>
+    <header>
+        <div class="header-contenedor">
+            <a href="/index.html" class="logo-enlace">
+                <img src="/img/logo_svg.svg" alt="Plataforma Educativa - Volver al inicio" class="logo-img">
+            </a>
+            
+            <nav aria-label="Navegación principal">
+                
+                <button id="btn-menu" class="btn-accesible btn-hamburguesa" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú de navegación">
+                    <img src="/img/menu.png" alt="Abrir menú de navegación" aria-hidden="true">
+
+                    </svg>
+                </button>
+
+                <ul id="menu-principal" class="menu-enlaces">
+                    <li><a href="../index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./nuestroscursos.html">Nuestros Cursos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <button id="btn-tema" aria-label="Activar modo oscuro" aria-pressed="false">
+                <img src="../img/sol.png" alt="Activar Modo Claro">
+                <img src="../img/luna.png" alt="Activar Modo Oscuro">
+            </button>
+        </div>
+    </header>
+
+    
+
+    <div class="contenedor-pagina-interna">
+        
+        <main class="columna-principal">
+            <section class="contacto-formulario">
+                <h1>Contacto</h1>
+                <p>Completá el formulario y nos comunicaremos a la brevedad.</p>
+                
+                <form id="form-contacto" aria-labelledby="titulo-formulario" novalidate>
+                    <fieldset>
+                        <legend id="titulo-formulario">Enviá tu consulta</legend>
+
+                        <div class="grupo-campo">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" required minlength="3" aria-describedby="nombre-ayuda" placeholder="Ej: Juan Pérez">
+                            <span id="nombre-ayuda" class="texto-ayuda">Debe contener al menos 3 caracteres.</span>
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required aria-describedby="email-ayuda" placeholder="Ej: juan@ejemplo.com">
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="telefono">Teléfono de contacto:</label>
+                            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" aria-describedby="telefono-ayuda">
+                            <span id="telefono-ayuda" class="texto-ayuda">Ej: 1123456789 (10 dígitos sin espacios).</span>
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" aria-describedby="mensaje-ayuda"></textarea>
+                            <span id="mensaje-ayuda" class="texto-ayuda">Tu mensaje debe tener al menos 10 caracteres.</span>
+                        </div>
+
+                        <button type="submit" id="btn-enviar">Enviar Mensaje</button>
+                        <div id="mensaje-estado" aria-live="polite" class="mensaje-estado"></div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <aside class="info-lateral">
+            <h2>Nuestra Ubicación</h2>
+            <address class="domicilio-tarjeta">
+                <p><strong>Sede Central</strong></p>
+                <p>Plaza Mitre, San Fernando</p>
+                <p>Constitución 1045</p>
+                <p>Provincia de Buenos Aires, Argentina</p>
+            </address>
+            <div class="contenedor-mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.450268641826!2d-58.560628224145326!3d-34.44071634890832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca563076adb09%3A0xbf9e389765665f4!2sPlaza%20Bartolom%C3%A9%20Mitre!5e0!3m2!1ses!2sar!4v1783359163078!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </aside>
+
+    </div> 
+
+
+    <footer>
+        <div class="footer-contenedor">
+            <p>© 2026 - Proyecto Final Integrador - Fundamentos del Diseño Web - UPSO - Alumna Brenda Yohena Tanoni</p>
+            
+            <div class="footer-grupo">
+                <a href="https://github.com/tanonibrenda/UPSO_TPDWEB" target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio de este proyecto en GitHub">
+                    <img src="../img/github.jpg" alt="Logo de GitHub" class="footer-icono">
+                    <span>Repositorio</span>
+                </a>
+                <a href="https://tanonibrenda.github.io/UPSO_TPDWEB/" target="_blank" rel="noopener noreferrer" aria-label="Ver el sitio web desplegado en GitHub Pages">
+                    <img src="../img/githubpages.png" alt="Logo de GitHub Pages" class="footer-icono">
+                    <span>Sitio en Vivo</span>
+                </a>
+            </div>
+
+            
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/contacto.js"></script>
+</body>
+</html>

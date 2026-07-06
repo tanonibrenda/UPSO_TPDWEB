@@ -1,0 +1,138 @@
+/* El Grid se aplica ahora al nuevo contenedor compartido */
+.contenedor-pagina-interna {
+    display: grid;
+    grid-template-columns: 1fr; /* Diseño de 1 columna para móviles por defecto */
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Desafío Optativo: Cambio a 2 columnas en pantallas de escritorio */
+@media (min-width: 768px) {
+    .contenedor-pagina-interna {
+        /* La columna principal (main) ocupa 2 partes y el aside ocupa 1 parte */
+        grid-template-columns: 2fr 1fr; 
+        align-items: start;
+    }
+}
+
+/* Layout Principal con CSS Grid */
+.contenedor-contacto {
+    display: grid;
+    grid-template-columns: 1fr; /* Móvil por defecto */
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Desafío Optativo: Media Queries para el layout de páginas internas */
+@media (min-width: 768px) {
+    .contenedor-contacto {
+        grid-template-columns: 2fr 1fr; /* Columna principal y aside lateral */
+        align-items: start;
+    }
+}
+
+/* Estilos de la sección Formulario */
+fieldset {
+    border: 2px solid var(--color-borde, #ccc);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    background-color: var(--color-fondo-form, #fdfdfd);
+}
+
+legend {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0 0.5rem;
+    color: var(--color-texto, #333);
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.grupo-campo label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.grupo-campo input, 
+.grupo-campo textarea {
+    padding: 0.75rem;
+    border: 1px solid #767676;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Indicadores visuales de Accesibilidad (Focus y validación) */
+.grupo-campo input:focus, 
+.grupo-campo textarea:focus {
+    outline: 3px solid #005fcc; /* Contraste alto para navegación por teclado */
+    outline-offset: 2px;
+    border-color: #005fcc;
+}
+
+.grupo-campo input:not(:placeholder-shown):invalid,
+.grupo-campo textarea:not(:placeholder-shown):invalid {
+    border-color: #d93025;
+}
+
+.texto-ayuda {
+    font-size: 0.85rem;
+    color: #5f6368;
+    margin-top: 0.35rem;
+}
+
+#btn-enviar {
+    background-color: #005fcc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#btn-enviar:hover,
+#btn-enviar:focus {
+    background-color: #004494;
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+}
+
+.mensaje-estado {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #d93025;
+}
+
+/* Estilos del Aside */
+.info-lateral {
+    background-color: var(--color-fondo-secundario, #f4f4f4);
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.domicilio-tarjeta {
+    font-style: normal;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--color-texto, #333);
+}
+
+.contenedor-mapa iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
