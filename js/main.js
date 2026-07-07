@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnMenu.setAttribute('aria-expanded', !estaExpandido);
         });
     }
+    
 
     // ==========================================================================
     // 2. LÓGICA DEL MODO OSCURO (Persistencia y Accesibilidad)

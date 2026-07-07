@@ -1,37 +1,112 @@
-## Tamaño de Botones
+# Trabajo Práctico Final Integrador - Diseño Web - Tecnicatura de Programación UPSO
+Alumna: Brenda Yohena Tanoni
+
+## Descripción
+El presente trabajo es la presentación del trabajo integrador final para la materia de Introducción al Diseño Web de la Tecnicatura de programación, para la Universidad Provincial del Sudoeste, en el primer cuatrimestre de 2026.
+Se trata de crear una plataforma educativa donde los usuarios pueden:
+1. Ingresar a la landing page.
+2. Conocer más sobre la institución con misión, visión y valores.
+3. Ver la galeria de cursos disponibles.
+4. Ingresar a uno y comprarlo (en forma simbólica).
+5. Contactarse.
+
+Todo respetando requisitos de la WCAG 2.2, A y AA.
+
+## Estructura del Sitio
+
+UPSO_TPWB
+|_ css
+|   |_ 404.cs
+|   |_ colores.css
+|   |_ contacto.css
+|   |_ footer.css
+|   |_ header
+|   |_ index.css
+|   |_ nosotros.css
+|   |_ nuestroscursos.css
+|_ img
+|   |_ (*imagenes de la plataforma)
+|_ js
+|   |_ contacto.js
+|   |_ cursos.js
+|   |_ main.js
+|_ pages
+|   |_ 404.hmtl
+|   |_ contacto.html
+|   |_ nuestroscursos.html
+|   |_ sobrenosotros.html
+|   |_ textoalternativo.html
+|_ validador
+|   |_ 404.hmtl
+|   |_ contacto.html
+|   |_ nuestroscursos.html
+|   |_ sobrenosotros.html
+|   |_ textoalternativo.html
+|   |_ index.html
+|_ index.html
+|_ README
+
+### Carpeta raíz
+Contiene la documentación en el README, y el index.html que contiene el landing page y permite realizar el deploy en github pages.
+
+### Carpeta css
+Contiene los documentos de estilos, algunos son reutilizados en varias páginas. Se busca respetar las normas WCAG 2.2. 
+
+### Carpeta img
+Contiene las imagenes del proyecto.
+
+### Carpeta js
+Contiene los archivos para dar funcionalidad y dinamismo a la página web. Aunque no se conecta con backend, como por ejemplo cuando se realiza la "compra de un curso", si muestra que hay interacción entre los archivos y manipulación del DOM.
+
+### Carpeta pages
+Contiene los archivos html para del proyecto. 
+
+### Carpeta validador
+En esta carpeta están los resultados de la validación en W3C (https://validator.w3.org/). Se detectó como único error la declaración de lenguaje en el archivo index.html; donde por presentar varios párrafos que contienen etiquetas semánticas asociado a texto "lorem ipsus", marca error al detectar otra lengua (Latín).
+
+## Fuentes y Recursos Utilizados
+
+### Tamaño de Botones
 Los botones cumplen el requisito 2.5.5, "Tamaño del Objeto", de 44 px para garantizar la accesibilidad a personas con discapacidad motríz (ej: Parkinson), o Sindrome del dedo gordo, usuarios de lectores de pantallasa o personas en  dispositivos móviles pequeños o lugares en moviento (ej: querer accionar el botón arriba de un colectivo).
 
-## Fuentes de Imágenes
+### Fuentes de Imágenes
 
 Portada del Index: Canva
 Dibujos de cursos generados con Copilot y editados con Canva
 
-### Iconos y Logo
-https://icon-icons.com/es/icono/libro-libros-educacion-bibliotecas-lectura-abierto-un-estudio/81275
+#### Iconos y Logo
 
-Icono Libro libros educación bibliotecas by DinosoftLabs on <a href="https://icon-icons.com/es/authors/452-dinosoftlabs">Icon-Icons.com</a>
+⁙ Icono Libro: https://icon-icons.com/es/icono/libro-libros-educacion-bibliotecas-lectura-abierto-un-estudio/81275
 
+⁙ Icono Libro libros educación bibliotecas by DinosoftLabs https://icon-icons.com/es/authors/452-dinosoftlabs
 
-Icono Libro libros educación bibliotecas by DinosoftLabs on <a href="https://icon-icons.com/es/authors/452-dinosoftlabs">Icon-Icons.com</a>
+⁙ Icono Libro libros educación bibliotecas by DinosoftLabs https://icon-icons.com/es/authors/452-dinosoftlabs
 
-Luna
-<a href="https://www.flaticon.es/iconos-gratis/luna" title="luna iconos">Luna iconos creados por Freepik - Flaticon</a>
+⁙ Luna https://www.flaticon.es/iconos-gratis/luna creados por Freepik - Flaticon
 
-Sol
-<a href="https://www.flaticon.es/iconos-gratis/sonreir" title="sonreír iconos">Sonreír iconos creados por Freepik - Flaticon</a>
+⁙ Sol https://www.flaticon.es/iconos-gratis/sonreir  iconos creados por Freepik - Flaticon
 
-Menú Hmaburgueza
-<a href="https://www.flaticon.es/iconos-gratis/menu-hamburguesa" title="menú-hamburguesa iconos">Menú-hamburguesa iconos creados por Stasy - Flaticon</a>
+⁙ Menú Hmaburgueza https://www.flaticon.es/iconos-gratis/menu-hamburguesa iconos creados por Stasy - Flaticon
 
-## Video Consultados
+### Video Consultados
 
-### Dark Mode
+####  Dark Mode
 🎬 https://www.youtube.com/watch?v=_gKEUYarehE
 
-### Google Map
+####  Google Map
 🗺️ https://www.youtube.com/watch?v=H7o-fQUVRBU
 
-### Funcionalidad de Formulario
+#### Funcionalidad de Formulario
     https://www.youtube.com/watch?v=huOz_FMYRt0
 
 
+### Páginas Web consultadas:
+⁙ https://validator.w3.org/
+⁙ https://developer.mozilla.org/en-US/
+⁙ https://www.w3.org/TR/WCAG22/#target-size-enhanced
+⁙ https://www.youtube.com/
+
+
+### IA Consultadas:
+⁙ Copilot
+⁙ Gemini

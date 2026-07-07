@@ -1,6 +1,5 @@
 /* ==========================================================================
    header.css - Estilos para los headers de todas las páginas.
-   
    ========================================================================== */
 
 .header-principal {
@@ -14,7 +13,7 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Envía el nav a la izq y el nav a la izq */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -26,12 +25,11 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    
 }
 
 /* Tamaño del logo */
 .logo-img {
-    height: 44px; /* Misma altura mínima que los botones para armonía visual */
+    height: 44px; /* Misma altura mínima que los botones accesibilidad */
     width: auto;
     display: block;
 }
@@ -40,9 +38,10 @@
 .logo-enlace:focus-visible {
     outline: 3px solid var(--color-primario);
     outline-offset: 4px;
-    border-radius: 50%; /* Como el logo es redondo, el foco redondo queda mejor */
+    border-radius: 50%;
 }
-/* BOTONES INTERACTIVOS (WCAG 2.5.5 Target Size AAA) */
+
+/* --- BOTONES INTERACTIVOS (WCAG 2.5.5 Target Size AAA) --- */
 .btn-accesible {
     min-width: 44px;
     min-height: 44px;
@@ -56,14 +55,21 @@
     color: var(--texto-principal);
 }
 
-/* Indicador visual de foco claro (WCAG 2.4.13 Focus Appearance AAA) */
 .btn-accesible:focus-visible,
 .menu-enlaces a:focus-visible {
     outline: 3px solid var(--color-primario);
     outline-offset: 2px;
 }
 
-/* --- NAVEGACIÓN DESKTOP  --- */
+/* Tamaño del menú hamburguesa */
+
+#btn-menu img {
+    width: 44px;
+    height: auto;
+    display: block;
+}
+
+/* --- Versión de escritorio --- */
 .menu-enlaces {
     display: flex;
     flex-direction: row; /* Flexbox alineado en fila para escritorio */
@@ -87,20 +93,29 @@
     font-weight: bold;
 }
 
-/* Ocultamos el botón hamburguesa en escritorio */
+/* Ocultamos el botón hamburguesa en pantallas grandes */
 .btn-hamburguesa {
     display: none; 
 }
 
-/* --- MEDIA QUERY: TABLET Y MÓVIL (768px o menos) --- */
+/* =========================================================
+   MEDIA QUERY: TABLET Y MÓVIL (768px o menos)
+   ========================================================= */
 @media (max-width: 768px) {
     .btn-hamburguesa {
-        display: flex; /* Mostramos el icono interactivo */
+        display: flex; /* Mostramos el botón */
     }
 
-    .menu-enlaces {
-        display: none; /* Ocultamos los enlaces por defecto */
-        flex-direction: column; /* Cambiamos Flexbox a columna */
+    /* Es VITAL darle position: relative al contenedor padre 
+       para que el menú absolute no se escape fuera de la pantalla */
+    .header-contenedor {
+        position: relative;
+    }
+
+    /* Usamos el ID de la lista para tener el control absoluto del display */
+    ul#menu-principal {
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
@@ -111,14 +126,9 @@
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         z-index: 50;
     }
-    #btn-menu img {
-        width: 44px; /* Tamaño mínimo de área táctil (WCAG) */
-        height: auto;
-        display: block;
-    }
-    /* Clase que agregamos con main.js para abrir el menú */
-   
-    #menu-enlaces.menu-abierto {
+
+    /* Al sumarle la clase que inyecta tu JS, se despliega el menú */
+    ul#menu-principal.menu-abierto {
         display: flex;
     }
 
@@ -127,7 +137,7 @@
         text-align: center;
     }
 
-    /* Agrandamos el área táctil de los enlaces en móvil (min 44px) */
+    /* Respetamos las normativas WCAG de 44px */
     .menu-enlaces a {
         display: block;
         padding: 1rem;
