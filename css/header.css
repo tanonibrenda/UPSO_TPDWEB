@@ -76,7 +76,16 @@
     font-weight: 500;
     position: relative;
 }
+/* Estado oculto por defecto en móviles */
+#menu-principal {
+    display: none; 
+    flex-direction: column;
+}
 
+/* Estado visible que activa nuestro JavaScript */
+#menu-principal.menu-abierto {
+    display: flex; 
+}
 /* Indicador de página actual visual */
 .menu-enlaces a[aria-current="page"] {
     border-bottom: 2px solid var(--color-primario);

@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller de Texto Alternativo</title>
+    <meta name="description" content="Conocé a nuestro equipo interdisciplinario en San Fernando especializado en desarrollo web y accesibilidad. Creamos entornos digitales verdaderamente inclusivos basándonos en las normativas WCAG 2.2.">
+    <meta name="author" content="Brenda Yohena Tanoni">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff"> <meta property="og:title" content="Sobre Nosotros | Plataforma Educativa">
+    <meta property="og:description" content="Descubrí nuestra misión, visión y compromiso con la creación de entornos digitales accesibles e inclusivos para todos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tanonibrenda.github.io/UPSO_TPDWEB/pages/sobrenosotros.html">
+    <meta property="og:image" content="https://tanonibrenda.github.io/UPSO_TPDWEB/img/logo_svg.svg">
+    <meta property="og:locale" content="es_AR">
+    <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="/css/colores.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/contacto.css">
-    <link rel="stylesheet" href="/css/nuestroscursos.css">
     <link rel="stylesheet" href="/css/nosotros.css">
 </head>
 <body>
@@ -22,14 +28,12 @@
             <nav aria-label="Navegación principal">
                 
                 <button id="btn-menu" class="btn-accesible btn-hamburguesa" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú de navegación">
-                    <img src="/img/menu.png" alt="Abrir menú de navegación" aria-hidden="true">
-
-                    </svg>
+                    <img src="/img/menu.png" alt="Abrir menú de navegación" aria-hidden="true">                   
                 </button>
 
                 <ul id="menu-principal" class="menu-enlaces">
-                    <li><a href="../index.html" aria-current="page">Inicio</a></li>
-                    <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./sobrenosotros.html" aria-current="page">Sobre Nosotros</a></li>
                     <li><a href="./nuestroscursos.html">Nuestros Cursos</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
                 </ul>
@@ -45,7 +49,7 @@
     <main class="layout-interno nosotros-contenedor">
         <section class="nosotros-principal">
             <h1>Sobre Nosotros</h1>
-            <p>Somos un equipo interdisciplinario apasionado por el desarrollo web y la accesibilidad. Trabajamos todos los días para crear entornos digitales inclusivos, cumpliendo con los estándares internacionales como las normativas <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2.</p>
+            <p>Somos un equipo interdisciplinario apasionado por el desarrollo web y la accesibilidad. Trabajamos <mark>todos los días</mark> para crear entornos digitales <em>verdaderamente inclusivos</em>, cumpliendo con los estándares internacionales como las normativas <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2.</p>
             
             <div class="cita-contenedor">
                 <blockquote>
@@ -98,13 +102,15 @@
                 <h2>Preguntas Frecuentes</h2>
                 
                 <details class="faq-item">
-                    <summary>¿Qué significa Kyosei?</summary>
-                    <p>Kyosei es un concepto japonés que significa "vivir y trabajar juntos para el bien común". Es la filosofía que aplicamos a cada uno de nuestros proyectos de accesibilidad y diseño universal.</p>
+                    <summary>¿La accesibilidad es solo para personas con discapacidad?</summary>
+                    <p>No. La accesibilidad beneficia a todos los usuarios, mejorando la experiencia general del sitio web.</p>
+                    <p>Hasta el 50% de las personas, van a necesitar que las plataformas digitales sean accesibles. Por ejemplo, una persona que quiere ver un video en un lugar ruidoso, va a necesitar subtítulos o una descripción auditiva.</p>
                 </details>
 
                 <details class="faq-item">
-                    <summary>¿Cómo realizamos las auditorías?</summary>
-                    <p>Evaluamos los sitios web utilizando tecnologías de asistencia como lectores de pantalla, navegación por teclado y validadores automáticos para asegurar que nadie quede excluido de la experiencia digital.</p>
+                    <summary>¿Se puede solo poner un parche para que sea accesible?</summary>
+                    <p>La accesibilidad es transversal. Y si se implementa de manera correcta, beneficia a todos los usuarios.</p>
+                    <p>Tratar de poner un parche al final del proyecto suele ser ineficaz, y puede crear nuevas barreras. Y los costos de corrección son generalmente mucho mayores que los de implementación desde el principio.</p>
                 </details>
             </section>
         </section>
@@ -114,12 +120,14 @@
             <p>Trabajamos de manera remota y presencial para ofrecer las mejores soluciones a nuestros clientes.</p>
             
             <div class="direccion-caja">
-                <address>
-                    <strong>Kyosei Accesibilidad</strong><br>
-                    San Fernando, Provincia de Buenos Aires<br>
-                    Argentina<br><br>
-                    📧 <a href="mailto:info@kyoseiaccesibilidad.com">info@kyoseiaccesibilidad.com</a><br>
-                    📱 <a href="tel:+5491112345678">+54 9 11 1234-5678</a>
+                <address><strong>Plataforma Educativa</strong>
+                    <br>
+                    San Fernando, Provincia de Buenos Aires
+                    <br>
+                    Argentina
+                    <br>
+                     <a href="mailto:info@kyoseiaccesibilidad.com">info@kyoseiaccesibilidad.com</a><br>
+                     <a href="tel:+5491112345678">+54 9 11 1234-5678</a>
                 </address>
             </div>
             

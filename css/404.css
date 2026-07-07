@@ -1,55 +1,67 @@
-/* --- Estilos para la página 404 --- */
+/* ==========================================================================
+   404.css - Estilos para la Página de Error 404
+   ========================================================================== */
 
 .error-404-contenedor {
-    /* Flexbox para centrar todo */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    
-    /* min-height asegura que ocupe buena parte de la pantalla 
-       (vh = viewport height) para empujar el footer hacia abajo */
+    text-align: center;    
     min-height: 70vh; 
-    padding: 2rem;
+    
+    /* Para prueba de Reflujo
+    https://www.w3schools.com/cssref/func_clamp.php
+    clamp sirve para mejorar la visibilidad en diferentes tamaños de pantalla */
+    padding: clamp(1rem, 5vw, 2rem);
     background-color: var(--fondo-principal);
+    box-sizing: border-box;
+    
+    /* el over flow evita el desbordamiento de texto en prueba de reflujo */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .error-404-contenedor h1 {
-    font-size: 6rem;
+    /* se reduce en pantallas pequeñas para evitar scroll horizontal */
+    font-size: clamp(4rem, 15vw, 6rem); 
     color: var(--color-primario);
     margin: 0;
-    line-height: 1;
+    /* line-height a 1.1 suele ser más seguro que 1 para no cortar trazos en ciertas tipografías */
+    line-height: 1.1; 
     font-weight: 800;
 }
 
 .error-404-contenedor h2 {
-    font-size: 1.8rem;
+    
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
     color: var(--texto-principal);
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-/* Estilos para el GIF */
 .gif-404 {
-    max-width: 100%;
-    width: 350px; /* Tamaño ideal para que no sea excesivo en escritorio */
+    /* Evita el scroll horizontal cuando el contenido es más ancho que el contenedor */
+    width: 100%; 
+    max-width: 350px; 
     height: auto;
-    border-radius: 8px; /* Bordes redondeados para seguir la estética */
+    border-radius: 8px; 
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .error-404-contenedor p {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 3vw, 1.1rem);
     color: var(--texto-principal);
     margin-bottom: 2rem;
-    max-width: 500px; /* Limita el ancho del texto para mejor lectura */
+    max-width: 500px; 
+    width: 100%; /* Asegura consistencia en pantallas ultra pequeñas */
 }
 
-/* Si tu .btn-principal no está importado globalmente, acá te dejo el resguardo */
 .error-404-contenedor .btn-principal {
-    display: inline-block;
+    display: inline-flex; /* inline-flex alinea mejor el texto interior que inline-block */
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-primario);
     color: var(--texto-boton, #FFF);
     padding: 0.8rem 1.5rem;
@@ -57,6 +69,12 @@
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    /* área táctil mínima recomendada de 44x44px (WCAG 2.5.5 Target Size) para evitar errores de precisión 
+    en dispositivos móviles para personas usuarias de lectores de pantalla, discapacidad motriz o situaciones
+    en que la precisión del toque es limitada (ej: viajar en colectivo).*/
+    min-height: 44px;
+    min-width: 44px;
 }
 
 .error-404-contenedor .btn-principal:hover {
@@ -65,6 +83,7 @@
 }
 
 .error-404-contenedor .btn-principal:focus-visible {
+    /* foco visible */
     outline: 3px solid var(--texto-principal);
     outline-offset: 2px;
 }

@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalle del Taller de Texto Alternativo nivel avanzado. Aprende a redactar descripciones precisas cumpliendo normativas WCAG 2.2.">
+    <meta name="author" content="Brenda Yohena Tanoni">
+    <meta name="theme-color" content="#3483fa">
     <title>Taller de Texto Alternativo</title>
     <link rel="stylesheet" href="/css/colores.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/contacto.css">
     <link rel="stylesheet" href="/css/nuestroscursos.css">
 </head>
 <body>
@@ -21,9 +23,7 @@
             <nav aria-label="Navegación principal">
                 
                 <button id="btn-menu" class="btn-accesible btn-hamburguesa" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú de navegación">
-                    <img src="/img/menu.png" alt="Abrir menú de navegación" aria-hidden="true">
-
-                    </svg>
+                    <img src="/img/menu.png" alt="Abrir menú de navegación" aria-hidden="true">                
                 </button>
 
                 <ul id="menu-principal" class="menu-enlaces">
@@ -76,7 +76,7 @@
                                 <li><strong>Idioma:</strong> Español.</li>
                                 <li><strong>Normativas:</strong> Cumple con WCAG 2.2.</li>
                             </ul>
-                            <!-- Cambiamos ID por CLASE btn-comprar -->
+                            
                             <button type="button" class="btn-principal btn-comprar" aria-label="Comprar ahora Taller de Texto Alternativo"> Comprar ahora</button>
                         </div>
                     </div>
@@ -142,22 +142,19 @@
 
         <!-- Aside Principal de Compra (Derecha) -->
         <aside class="barra-lateral producto-comprar" aria-labelledby="titulo-compra">
-            <div class="sticky-lateral"> <!-- Envoltorio para hacerlo fijo en escritorio -->
+            <div class="sticky-lateral"> 
                 <h2 id="titulo-compra" class="sr-only">Opciones de compra</h2>
                 
                 <div class="precio-contenedor">
                     <p class="precio" aria-label="Precio: 14500 pesos argentinos">$ 14.500</p>
-                    <p class="impuestos">Precio sin impuestos nacionales: $ 14.500</p>
+                    
                 </div>
                 
                 <div class="envio-info">
-                    <p><strong>Acceso Inmediato</strong> a la plataforma.</p>
+                    <p><mark><strong>Acceso Inmediato</strong></mark> a la plataforma.</p>
                     
                 </div>
 
-                
-
-               
                 <button type="button" class="btn-principal btn-comprar" aria-label="Comprar ahora" id="btn-comprar-aside">
                     Comprar ahora
                 </button>

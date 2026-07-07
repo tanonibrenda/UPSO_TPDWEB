@@ -1,4 +1,9 @@
-
+/* ==========================================================================
+   colores.css - Paleta de colores tanto para Modo Claro como para Modo Oscuro
+   Respeta las pautas de accesibilidad WCAG 2.2 para contraste de color y 
+   legibilidad.    Cotejado por la app Colour Contrasr Analizer para tener un
+    ratio de contraste mínimo de 4.5:1 para texto normal y 3:1 para texto grande.
+   ========================================================================== */
 /* Paleta de colores por defecto (Modo Claro) */
 /* Custom Properties (variables)  */
 :root {
@@ -27,6 +32,13 @@ body {
     background-color: var(--fondo-principal);
     color: var(--texto-principal);
     /* Transición suave para el cambio de tema */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using */
+    /* Esto permite una transicion suave en cambio de colores. Esto no solo permite ser agradable y atractivo a la vista,
+    sino que los cambios bruscos de las imágenes pueden causar:
+    - sobrecarga cognitiva
+    - crisis vertiginosas en pacientes que padecen enfermedad de Menier o vertigo de origen central
+    - convulsiones a pacientes con trastornos neurológicos
+    A la vez, el no ser ser mayor a 0,3 segundos, evita perder usuarios ansiosos que no esperan pausas largas. */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -49,7 +61,7 @@ body {
     outline-offset: 2px;
 }
 
-/* Fijamos el tamaño exacto de los íconos para que no se desborden */
+/* Fijo el tamaño exacto de los íconos para que no se desborden en pruebas de reflujo */
 #btn-tema img {
     width: 35px;
     height: 35px;

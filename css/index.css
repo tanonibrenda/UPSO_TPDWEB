@@ -17,17 +17,19 @@
     width: 100%;
 }
 
-/* Asegurar que el main tenga un espaciado consistente y no pegue al borde */
+/* Asegurar que el main no se pegue al borde */
 main {
     display: block;
     padding: 2rem 0;
-    min-height: calc(100vh - 160px); /* Mantiene el footer abajo en pantallas con poco contenido */
+    min-height: calc(100vh - 160px); 
 }
 
-/* Evitar outlines predeterminados en el main al recibir el foco de accesibilidad */
+/* Mejora la accesibilidad del foco en el main */
 main:focus {
-    outline: none;
+    outline: 3px solid var(--color-primario);
+    outline-offset: 4px;
 }
+
 
 
 /* ==========================================================================
@@ -268,10 +270,15 @@ cite {
     color: var(--texto-principal);
     opacity: 0.85;
 }
+.tarjeta:focus-within {
+    outline: 3px solid var(--color-primario);
+    outline-offset: 4px;
+}
 
-/* --- INTERACTIVIDAD AVANZADA (PSEUDOCLASES DE ACCESIBILIDAD) --- */
+/* --- USO DE PSEUDOCLASES  --- */
 
-/* 1. Hover (Dispositivos apuntadores) */
+/* 1. Hover  */
+/* https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:hover */
 .tarjeta-enlace:hover .tarjeta {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -282,7 +289,7 @@ cite {
     transform: scale(1.04); /* Efecto interactivo de zoom suave */
 }
 
-/* 2. Focus Visible (Feedback claro y visible para navegación por teclado con Tab) */
+/* 2. Focus Visible  */
 .tarjeta-enlace:focus-visible .tarjeta {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
@@ -295,9 +302,11 @@ cite {
     transform: scale(1.04);
 }
 
-/* 3. Active (Feedback instantáneo al hacer clic o pulsar Enter) */
+/* 3. Active para que tenga respuesta visual con la interaccion del usuario cuando activa un elemento */
+/* https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:active */
+
 .tarjeta-enlace:active .tarjeta {
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* traslado hacia arriba */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -313,7 +322,7 @@ cite {
     }
 }
 
-/* Clase utilitaria de accesibilidad (Ocultar visualmente, mantener en lectores de pantalla) */
+/* Permite al lector de pantalla acceder al contenido oculto visualmente, en este caso la descripción de la imagen central del hero */
 .sr-only {
     position: absolute;
     width: 1px;
