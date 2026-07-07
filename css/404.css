@@ -1,0 +1,70 @@
+/* --- Estilos para la página 404 --- */
+
+.error-404-contenedor {
+    /* Flexbox para centrar todo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    /* min-height asegura que ocupe buena parte de la pantalla 
+       (vh = viewport height) para empujar el footer hacia abajo */
+    min-height: 70vh; 
+    padding: 2rem;
+    background-color: var(--fondo-principal);
+}
+
+.error-404-contenedor h1 {
+    font-size: 6rem;
+    color: var(--color-primario);
+    margin: 0;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.error-404-contenedor h2 {
+    font-size: 1.8rem;
+    color: var(--texto-principal);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para el GIF */
+.gif-404 {
+    max-width: 100%;
+    width: 350px; /* Tamaño ideal para que no sea excesivo en escritorio */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para seguir la estética */
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-404-contenedor p {
+    font-size: 1.1rem;
+    color: var(--texto-principal);
+    margin-bottom: 2rem;
+    max-width: 500px; /* Limita el ancho del texto para mejor lectura */
+}
+
+/* Si tu .btn-principal no está importado globalmente, acá te dejo el resguardo */
+.error-404-contenedor .btn-principal {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--texto-boton, #FFF);
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.error-404-contenedor .btn-principal:hover {
+    filter: brightness(0.9);
+    transform: scale(1.02);
+}
+
+.error-404-contenedor .btn-principal:focus-visible {
+    outline: 3px solid var(--texto-principal);
+    outline-offset: 2px;
+}
