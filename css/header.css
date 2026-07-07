@@ -1,4 +1,7 @@
-/* --- header.css --- */
+/* ==========================================================================
+   header.css - Estilos para los headers de todas las páginas.
+   
+   ========================================================================== */
 
 .header-principal {
     background-color: var(--color-superficie);
@@ -60,9 +63,10 @@
     outline-offset: 2px;
 }
 
-/* NAVEGACIÓN DESKTOP */
+/* --- NAVEGACIÓN DESKTOP  --- */
 .menu-enlaces {
     display: flex;
+    flex-direction: row; /* Flexbox alineado en fila para escritorio */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -76,42 +80,27 @@
     font-weight: 500;
     position: relative;
 }
-/* Estado oculto por defecto en móviles */
-#menu-principal {
-    display: none; 
-    flex-direction: column;
-}
 
-/* Estado visible que activa nuestro JavaScript */
-#menu-principal.menu-abierto {
-    display: flex; 
-}
 /* Indicador de página actual visual */
 .menu-enlaces a[aria-current="page"] {
     border-bottom: 2px solid var(--color-primario);
     font-weight: bold;
 }
 
-/* Ajustamos el tamaño visual del ícono del menú */
-#btn-menu img {
-    width: 44px; /* tamaño mínimo de botones para tener accesibilidad */
-    height: auto;
-    display: block;
-}
-
+/* Ocultamos el botón hamburguesa en escritorio */
 .btn-hamburguesa {
-    display: none; /* Oculto en escritorio */
+    display: none; 
 }
 
 /* --- MEDIA QUERY: TABLET Y MÓVIL (768px o menos) --- */
 @media (max-width: 768px) {
     .btn-hamburguesa {
-        display: flex; /* Mostramos el icono en tablet/móvil */
+        display: flex; /* Mostramos el icono interactivo */
     }
 
     .menu-enlaces {
         display: none; /* Ocultamos los enlaces por defecto */
-        flex-direction: column;
+        flex-direction: column; /* Cambiamos Flexbox a columna */
         position: absolute;
         top: 100%;
         left: 0;
@@ -122,9 +111,14 @@
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         z-index: 50;
     }
-
-    /* Clase que agregaremos con JavaScript para abrir el menú */
-    .menu-enlaces.abierto {
+    #btn-menu img {
+        width: 44px; /* Tamaño mínimo de área táctil (WCAG) */
+        height: auto;
+        display: block;
+    }
+    /* Clase que agregamos con main.js para abrir el menú */
+   
+    #menu-enlaces.menu-abierto {
         display: flex;
     }
 
@@ -133,10 +127,10 @@
         text-align: center;
     }
 
-    /* Agrandamos el área táctil de los enlaces en móvil */
+    /* Agrandamos el área táctil de los enlaces en móvil (min 44px) */
     .menu-enlaces a {
         display: block;
         padding: 1rem;
-        min-height: 44px;
+        min-height: 44px; 
     }
 }
